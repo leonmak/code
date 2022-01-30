@@ -15,8 +15,8 @@ fn check_status(sat_id: CubeSat) -> StatusMessage {
 fn main () {
   let sat_a = CubeSat { id: 0 };
 
-  let a_status = check_status(sat_a.clone());   // <2>
-  println!("a: {:?}", a_status.clone());        // <2>
+  let a_status = check_status(sat_a.copy());   // <2>
+  println!("a: {:?}", a_status.copy());        // <2>
 
   let a_status = check_status(sat_a);           // <3>
   println!("a: {:?}", a_status);                // <3>

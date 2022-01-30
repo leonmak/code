@@ -1,5 +1,9 @@
 use std::ops::{Add};                             // <1>
-use std::time::{Duration};                       // <2>
+use std::time::{Duration,};                       // <2>
+
+// generic T implements trait Add
+// operators are ALL syntactic sugar for traits
+// a + b is actually a.add(b)
 
 fn add<T: Add<Output = T>>(i: T, j: T) -> T {    // <3>
   i + j

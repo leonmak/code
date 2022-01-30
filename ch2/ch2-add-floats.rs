@@ -15,3 +15,8 @@ fn main() {
     assert!(abc.0 + abc.1 == abc.2);    //<1>
     assert!(xyz.0 + xyz.1 == xyz.2);    //<2>
 }
+
+// don't compare with floats
+// can use epsilon
+//   let absolute_difference = (desired - result).abs();
+//   assert!(absolute_difference <= f32::EPSILON);

@@ -47,4 +47,5 @@ fn main() {
   //...
   println!("{:?}", f6);           // <6>
   println!("{}", f6);             // <7>
+  f6.open()
 }

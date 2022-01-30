@@ -5,6 +5,7 @@ use std::io::prelude::*;
 fn main() {
   let f = File::open("readme.md").unwrap();    // <1>
   let mut reader = BufReader::new(f);
+  // use buffered IO to make fewer chunky calls, faster than many small syscalls
 
   let mut line = String::new();    // <2>
 

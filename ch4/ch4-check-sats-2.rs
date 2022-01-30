@@ -8,9 +8,7 @@ enum StatusMessage {
   Ok,
 }
 
-fn check_status(
-  sat_id: CubeSat
-) -> StatusMessage {   // <2>
+fn check_status(sat_id: CubeSat) -> StatusMessage {   // <2>
   StatusMessage::Ok
 }
 
@@ -23,6 +21,8 @@ fn main() {
   let b_status = check_status(sat_b);
   let c_status = check_status(sat_c);
   println!("a: {:?}, b: {:?}, c: {:?}", a_status, b_status, c_status);
+  // primitive types are said to possess copy semantics, whereas all other types have move semantics.
+  // ie primitives implement copy trait, default to no deep clones for complex types
 
   // "waiting" ...
   let a_status = check_status(sat_a);

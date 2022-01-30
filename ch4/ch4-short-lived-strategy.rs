@@ -65,8 +65,8 @@ fn main() {
 
   let sat_ids = fetch_sat_ids();
 
+  // idea is to split sending and receiving stages
   for sat_id in sat_ids {
-    let sat = base.connect(sat_id);
     let msg = Message { to: sat_id, content: String::from("hello") };
     base.send(&mut mail, msg);
   }

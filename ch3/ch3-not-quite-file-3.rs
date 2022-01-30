@@ -60,4 +60,9 @@ fn main() {
   println!("{:?}", f3);
   println!("{} is {} bytes long", &f3.name, f3_length);
   println!("{}", text);
+
+  let f3_dataa: Vec<u8> = vec![];
+  f3.read(&mut f3_dataa);
+  println!("{:?}", f3_dataa);
+  
 }
